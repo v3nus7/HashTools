@@ -6,8 +6,8 @@ A professional tool for professional crackers
 
 ابزاری حرفه ای برای کرکر های حرفه ای
 
+Use
 `````sh
-
 $ git clone https://github.com/v3nus7/HashTools.git
 
 $ cd HashTools
