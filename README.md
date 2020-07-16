@@ -8,10 +8,8 @@ A professional tool for professional crackers
 
 Use
 `````sh
-$ git clone https://github.com/v3nus7/HashTools.git
-
-$ cd HashTools
-
-$ python3 h.py
+ git clone https://github.com/v3nus7/HashTools.git
+ cd HashTools
+ python3 h.py
 `````
 
