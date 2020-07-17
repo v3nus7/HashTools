@@ -92,15 +92,16 @@ while mode != "9":
                 [1] Crack multiple files
                 [2] Crack Singel File
                                         : '''))
-        f = 'f.txt' #input('Pleas Inter Your file : ')
-        typ = 'md5' #input('''   ENTER YOUR HASH TYPE
+        f = input('Pleas Inter Your file : ')
+        typ = input('''   ENTER YOUR HASH TYPE
         #HA1, SHA224, SHA256, SHA384, SHA512 , FIPS , MD5
         #            ''')
-        spc = ':' #input("Pleas Inter Split chrakter : ': ; , / and ....'  : ")
-        pw = 'r.txt' #input('Ples inter WordList : ')
-        of = open(f+'Cracked.txt', 'w')
+        spc = input("Pleas Inter Split chrakter : ': ; , / and ....'  : ")
+        pw = input('Ples inter WordList : ')
+        fo = open(f+'Cracked.txt', 'w')
         n = 0
         er = 0
+        fo.write('\n')
         if mod2 == 1:
             dic = dict()
             for s2d in open(pw):
@@ -113,7 +114,7 @@ while mode != "9":
                     user = line.split(spc)[0].strip()
                     if lspc in dic.keys():
                         print("YAFTAAAM : . . ....",lspc ,' | ',dic[lspc])
-                        of.write(user+spc+dic[lspc])
+                        fo.write(user+spc+dic[lspc])
                     else:
                         print('not find' ,lspc)
         if mod2 == 2:
@@ -123,12 +124,13 @@ while mode != "9":
                     h = line.split(spc)[1].strip()
                     for l in open(pw):
                         cr = (getattr(hashlib, typ)((l.strip()).encode()).hexdigest())
-                        #print(cr)
                         if h == cr:
                             print(h ,'\t', l.strip())
+                            fo.write(h[0]+spc+l)
                             break
                 except IndexError:
                     er += 1
-        of.close()
+        fo.write('\n')
+        fo.close()
     mode = input(im)
 print(' CLOSEED PROGRRAM ')
