@@ -132,5 +132,10 @@ while mode != "9":
                     er += 1
         fo.write('\n')
         fo.close()
+    if mode == '7':
+        print('''
+            sinaabdi.com
+            email : nima7846@gmail.com
+        ''')
     mode = input(im)
 print(' CLOSEED PROGRRAM ')
